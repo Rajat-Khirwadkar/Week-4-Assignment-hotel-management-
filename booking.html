@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|Tripenzo|</title>
+    <link rel="stylesheet" href="booking.css">
+    <!-- <link rel="stylesheet" href="bookingchat.css"> -->
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">Tripenzo</div>
+
+            <nav class="nav-links">
+                <a href="#">STAYS</a>
+                <a href="#">FLIGHTS</a>
+                <a href="#">CAR RENTAL</a>
+                <a href="#">AIRPORT TAXIS</a>
+            </nav>
+            <div>
+                <a href="sign.html">
+                    <button class="signup-btn">Sign Up</button>
+                </a>
+            </div>
+    </header>
+    </div>
+    <div class="video">
+        <video width="100%" autoplay loop muted>
+            <source src="TAJ WEBSITE.mp4" type="video/mp4">
+        </video>
+    </div>
+    <hr>
+    <div class="search">
+        <h2 style="text-align: center; margin-top: 20px;">Enter Your Stay Information</h2>
+        <div class="search-bar">
+
+
+            <div class="document-card">
+                <h3 onclick="toggleDocuments()" style="cursor: pointer;">
+                    Documents ▼
+                </h3>
+                <div id="document-details">
+                    <ul>
+                        <li><a href="#">🧾 ID Proof (PDF)</a></li>
+                        <li><a href="#">🧾 Booking Invoice</a></li>
+                        <li><a href="#">🧾 Payment Receipt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h2>when?</h2>
+                <div>
+                    <h5>Check-in-date</h5>
+                    <input type="date" id="checkin" class="date-input" placeholder="Check-in">
+                </div>
+            </div>
+            <div class="box4">
+                <h5>Check-Out-date</h5>
+                <input type="date" id="checkout" class="date-input" placeholder="Check-out">
+            </div>
+            <div class="box4">
+                <h5>Guest</h5>
+                <div class="guest-box" onclick="toggleDropdown()">
+                    <span id="guestText">2 adults · 0 children · 1 room</span>
+                    <div class="guest-dropdown" id="guestDropdown">
+                        <label>Adults:
+                            <input type="number" id="adults" value="2" min="1" max="10" />
+                        </label>
+                        <label>Children:
+                            <input type="number" id="children" value="0" min="0" max="10" />
+                        </label>
+                        <label>Rooms:
+                            <input type="number" id="rooms" value="1" min="1" max="5" />
+                        </label>
+                        <button onclick="updateGuestText()">Done</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box4">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </div>
+    <section id="map-section" style="text-align: center; margin: 40px 0;">
+        <h2>📍 Our Location in Indore</h2>
+        <div
+            style="width: 100%; height: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.770422437054!2d75.86721861543028!3d22.71956888510507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd9d271c6f11%3A0x4f97c126d84cd4b4!2sIndore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1628143769123!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+    <hr>
+
+
+    <section class="cards">
+        <div class="hotel-card">
+            <div class="slider">
+                <img src="slider7 .webp" class="slide active" alt="Slide 1" />
+                <img src="slider5.webp" class="slide" alt="Slide 2" />
+                <img src="slider6.webp" class="slide" alt="Slide 3" />
+            </div>
+            <div class="hotel-info">
+                <h2>Double Bed Room</h2>
+                <p>📍Location: Bohemian 1BHK vijay Nagar W by The Tripenzo Home Company offers accommodations in Indore,
+                    1.2
+                    miles
+                    from Rajwada and 3.7 miles from Indore Junction. INDORE, India</p>
+                <div class="rating">⭐ 4.2 / 5 (58,400 reviews)</div>
+                <a href="#" class="visit-btn">Visit room</a>
+            </div>
+        </div>
+        <div class="hotel-card">
+            <div class="slider">
+                <img src="slider1.webp" class="slide active" alt="Slide 1" />
+                <img src="slider2.webp" class="slide" alt="Slide 2" />
+                <img src="slider3.webp" class="slide" alt="Slide 3" />
+            </div>
+            <div class="hotel-info">
+                <h2>Single Bed Room</h2>
+                <p>📍 Location: Bohemian 2BHK vijay Nagar W by The Tripenzo Home Company offers accommodations in
+                    Indore, 1.2
+                    miles from Rajwada and 3.7 miles from Indore Junction. INDORE, India</p>
+                <div class="rating">⭐ 4.4 / 5 (43,105 reviews)</div>
+                <a href="#" class="visit-btn">Visit room</a>
+            </div>
+        </div>
+        <div class="hotel-card">
+            <div class="slider">
+                <img src="slider8.webp" class="slide active" alt="Slide 1" />
+                <img src="slider9.webp" class="slide" alt="Slide 2" />
+                <img src="slider10.webp" class="slide" alt="Slide 3" />
+            </div>
+            <div class="hotel-info">
+                <h2>King Size Bed Room</h2>
+                <p>📍Location: Bohemian 1BHK vijay Nagar W by The Tripenzo Home Company offers accommodations in Indore,
+                    1.2
+                    miles
+                    from Rajwada and 3.7 miles from Indore Junction. INDORE, India</p>
+                <div class="rating">⭐ 4.0 / 5 (12,500 reviews)</div>
+                <a href="#" class="visit-btn">Visit room</a>
+            </div>
+        </div>
+        <div class="hotel-card">
+            <div class="slider">
+                <img src="slider1.webp" class="slide active" alt="Slide 1" />
+                <img src="slider5.webp" class="slide" alt="Slide 2" />
+                <img src="slider12.webp" class="slide" alt="Slide 3" />
+            </div>
+            <div class="hotel-info">
+                <h2> Accommodate Two Guests. </h2>
+                <p>📍 Location: Bohemian 1BHK vijay Nagar W by The Tripenzo Home Company offers accommodations in
+                    Indore, 1.2
+                    miles from Radwara and 3.7 miles from Indore Junction. INDORE, India</p>
+                <div class="rating">⭐ 4.1 / 5 (38,205 reviews)</div>
+                <a href="#" class="visit-btn">Visit room</a>
+            </div>
+        </div>
+        <div class="hotel-card">
+            <div class="slider">
+                <img src="slider10.webp" class="slide active" alt="Slide 1" />
+                <img src="slider7.webp" class="slide" alt="Slide 2" />
+                <img src="slider2.webp" class="slide" alt="Slide 3" />
+            </div>
+            <div class="hotel-info">
+                <h2>Pool Attached Bed Room</h2>
+                <p>📍Location: Bohemian 1BHK vijay Nagar W by The Tripenzo Home Company offers accommodations in Indore,
+                    1.2
+                    miles
+                    from Radwara and 3.7 miles from Indore Junction. INDORE, India</p>
+                <div class="rating">⭐ 5.0 / 5 (28,701 reviews)</div>
+                <a href="#" class="visit-btn">Visit room</a>
+            </div>
+        </div>
+        <div class="hotel-card">
+            <div class="slider">
+                <img src="slider11.webp" class="slide active" alt="Slide 1" />
+                <img src="slider5.webp" class="slide" alt="Slide 2" />
+                <img src="slider3.webp" class="slide" alt="Slide 3" />
+            </div>
+            <div class="hotel-info">
+                <h2>Special Guest Room</h2>
+                <p>📍 Location: Bohemian 1BHK vijay Nagar W by The Tripenzo Home Company offers accommodations in
+                    Indore, 1.2
+                    miles from Rajwada and 3.7 miles from Indore Junction. INDORE, India</p>
+                <div class="rating">⭐ 4.8 / 5 (8,405 reviews)</div>
+                <a href="#" class="visit-btn">Visit room</a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="advertisement" id="advertisement">
+        <div class="ad-content">
+            <div class="ad-text">
+                <h1>Experience Luxury at Tripenzo</h1>
+                <p>Enjoy premium stays in Indore with top-class services, scenic rooms, and up to <strong>30%
+                        off</strong> for
+                    new bookings!</p>
+                <a href="#rooms" class="book-now-btn">Book Now</a>
+            </div>
+            <div class="ad-image">
+                <img src="addimg.webp" alt="Luxury Hotel Room" />
+            </div>
+        </div>
+    </section>
+
+    <section class="section_container banner_container">
+        <div class="banner_cardes">
+            <div class="banner__card">
+                <h4>10+</h4>
+                <p>Years Experience</p>
+            </div>
+            <div class="banner__card">
+                <h4>12K</h4>
+                <p>Happy Clients</p>
+            </div>
+            <div class="banner__card">
+                <h4>4.8</h4>
+                <p>Overall Ratings</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_container discover_container">
+        <h2 class="section__header">Experience Breathtaking Views and Unique Perspectives</h2>
+        <p class="section__description">
+            Enjoy world-class hospitality, elegant rooms, and premium amenities designed to make your stay
+            unforgettable.
+        </p>
+        <div class="discover__flex">
+            <div class="discover__card">
+                <h4> Stylish Accommodations </h4>
+                <p>
+                    Enjoy sleek, spacious rooms equipped for total relaxation.
+                </p>
+            </div>
+            <div class="discover__card">
+                <h4>Exceptional Dining</h4>
+                <p>
+                    Delight your taste buds with delicious cuisine from our in-house restaurant.
+                </p>
+            </div>
+            <div class="discover__card">
+                <h4> Relaxation & Amenities</h4>
+                <p>
+                    From 24/7 service to spa and lounge areas, we offer everything for your perfect stay.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_container client_container">
+        <h2 class="section__header">Stories from Happy Stays</h2>
+        <p class="section__description">
+            Real voices. Real experiences. Hear what our guests loved most about staying at Tripenzo.
+        </p>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="client__card">
+                        <div class="client__content">
+
+                            <p>
+                                Tripenzo offered the perfect escape from the usual routine.
+                                The room was cozy, clean, and had everything I needed for a restful stay.
+                                I was especially impressed by the speed of the service and the quality of the food.
+
+
+
+                            </p>
+                        </div>
+                        <div class="client__details">
+                            <!-- <img src="assets/client-1.jpg" alt="client" /> -->
+                            <div>
+                                <h4>Ravi Malhotra</h4>
+                                <h5>Weekend Guest</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="client__card">
+                        <div class="client__content">
+
+                            <p>
+                                I booked Tripenzo for a special occasion, and it turned out to be the perfect choice.
+                                The staff helped us set up a surprise dinner, and the service was flawless throughout.
+                                I’ll definitely be back for more memorable moments.
+
+
+                            </p>
+                        </div>
+                        <div class="client__details">
+                            <!-- <img src="assets/client-2.jpg" alt="client" /> -->
+                            <div>
+                                <h4>Vikram Patel</h4>
+                                <h5>Special Occasion Traveler</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="client__card">
+                        <div class="client__content">
+                            <p>
+                                Tripenzo offered everything I could ask for in a relaxing getaway.
+                                The rooms were immaculate, the staff was incredibly responsive, and the food was truly
+                                top-notch.
+                                From check-in to check-out, every detail was handled with care.
+                            </p>
+                        </div>
+                        <div class="client__details">
+                            <!-- <img src="assets/client-4.jpg" alt="client" /> -->
+                            <div>
+                                <h4>Aarav Kapoor</h4>
+                                <h5>Weekend Guest</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="section11" id="about" style="padding: 40px; background-color: #f9f9f9;">
+        <h2>About Tripenzo</h2>
+        <p>
+            Tripenzo is your ultimate travel companion, dedicated to making your trips more exciting, affordable, and
+            stress-free.
+            We help travelers discover the best destinations, book accommodations, and plan activities with ease.
+        </p>
+        <p>
+            Whether you're an adventure seeker, a family vacationer, or a solo explorer, Tripenzo has something for
+            everyone.
+            Our mission is to simplify travel and help you create unforgettable memories.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section11" id="contact" style="padding: 40px; background-color: #ffffff;">
+        <h2>Contact Us</h2>
+        <p>Have questions or need help? We'd love to hear from you!</p>
+        <ul>
+            <li><strong>Email:</strong> support@tripenzo.com</li>
+            <li><strong>Phone:</strong> +91 98765 43210</li>
+            <li><strong>Customer Support Hours:</strong> Mon-Fri, 9:00 AM - 6:00 PM</li>
+        </ul>
+    </section>
+
+    <!-- Location Section -->
+    <section class="section11" id="location" style="padding: 40px;background-color: #f0f0f0;">
+        <h2>Our Location</h2>
+        <p>Visit our head office at:</p>
+        <address>
+            Tripenzo Pvt. Ltd.<br>
+            Vijay Nagar,<br>
+            Vijay Nagar, Indore, M.P 452000<br>
+            India
+        </address>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">COVID-19 FAQs</a></li>
+                    <li><a href="#">Manage your trips</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Safety Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Discover</h4>
+                <ul>
+                    <li><a href="#">Holiday deals</a></li>
+                    <li><a href="#">Travel articles</a></li>
+                    <li><a href="#">Car rental</a></li>
+                    <li><a href="#">Restaurant bookings</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Terms</h4>
+                <ul>
+                    <li><a href="#">Privacy & cookies</a></li>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">About Tripenzo</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Affiliate</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div> Tripenzo.com is part of Booking Holdings Inc., the world leader in online travel and related services.
+        </div>
+        <div>Copyright © 2020–2025 Tripenzo.com™. All rights reserved.</div>
+        <div class="footer-bottom">
+            <p>© 2025 Tripenzo. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="booking.js">
+    </script>
+
+</body>
+
+</html>
